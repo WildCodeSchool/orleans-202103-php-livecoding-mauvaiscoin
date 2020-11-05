@@ -1,6 +1,4 @@
-parameters:
-    git_dir: .
-    bin_dir: bin
+grumphp:
     tasks:
         phpcs:
             standard: ~
