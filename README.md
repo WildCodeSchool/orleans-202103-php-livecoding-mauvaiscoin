@@ -63,8 +63,8 @@ Before your students can code, you have some work to do !
 1. Run `.vendor/bin/phpcs` to launch PHP code sniffer
 2. Run `.vendor/bin/phpstan analyse src --level max` to launch PHPStan
 3. Run `.vendor/bin/phpmd src text phpmd.xml` to launch PHP Mess Detector
-3. Run `.vendor/bin/eslint assets/js` to launch ESLint JS linter
-3. Run `.vendor/bin/sass-lint -c sass-linter.yml` to launch Sass-lint SASS/CSS linter
+3. Run `./node_modules/.bin/eslint assets/js` to launch ESLint JS linter
+3. Run `../node_modules/.bin/sass-lint -c sass-linter.yml -v` to launch Sass-lint SASS/CSS linter
 
 ### Windows Users
 
