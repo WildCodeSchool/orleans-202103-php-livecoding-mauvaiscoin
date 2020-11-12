@@ -20,19 +20,7 @@ It's symfony website-skeleton project with some additional tools to validate cod
     * PHP_CodeSniffer, PHPStan and PHPmd with same configuration as GrumPHP.
  
 
-## Getting Started for trainers
-
-Before your students can code, you have some work to do !
-
-### Get starter kit
-
-1. Use this repository as template to create a new repsoitory. Name it as 
-**ville-language-sessionYYYYMM-type-project** as **bordeaux-php-202003-pjt3-servyy**
-5. Edit `.travis.yml` file to change default e-mails settings to get notification checking tasks end
-6. Remove the trainers instructions int this README file
-
-
-### Configure you repository - Settings options
+### Trainers instructions
 
 1. Add your students team as contributor .
 2. Disallow both on 'dev' and 'master' branches your students writing credentials. 
@@ -40,7 +28,7 @@ Before your students can code, you have some work to do !
 
 > You can watch this very tiny short video : (Loom : verrouillage branches GitHub)[https://www.loom.com/share/ad0c641d0b9447be9e40fa38a499953b]
 
-## Getting Started for Projects
+## Getting Started for Students
 
 ### Prerequisites
 
