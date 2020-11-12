@@ -1,3 +1,6 @@
+@import 'variables.scss';
+
 body {
-    background-color: lightgray;
+    background-color: $wild-color;
+    color: $light-color;
 }

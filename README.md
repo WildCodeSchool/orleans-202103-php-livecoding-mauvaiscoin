@@ -1,4 +1,4 @@
-# Project 3 - Starter Kit - Symfony 4.4.*
+# Project 3 - Starter Kit - Symfony 5.*
 
 ![Wild Code School](https://wildcodeschool.fr/wp-content/uploads/2019/01/logo_pink_176x60.png)
 
@@ -8,16 +8,16 @@ It's symfony website-skeleton project with some additional tools to validate cod
 
 * GrumPHP, as pre-commit hook, will run 2 tools when `git commit` is run :
   
-    * PHP_CodeSniffer to check PSR2 
-    * PHPStan will check PHP recommendation
+    * PHP_CodeSniffer to check PSR12 
+    * PHPStan focuses on finding errors in your code (without actually running it)
+    * PHPmd will check if you follow PHP best practices
      
   If tests fail, the commit is canceled and a warning message is displayed to developper.
 
-* Travis CI, as Continuous Integration will be run when a branch with active pull request is updated on github. It will run :
+* Github Action as Continuous Integration will be run when a branch with active pull request is updated on github. It will run :
 
     * Tasks to check if vendor, .idea, env.local are not versionned,
-    * PHP_CodeSniffer to check PSR2,
-    * PHPStan will check PHP recommendation.
+    * PHP_CodeSniffer, PHPStan and PHPmd with same configuration as GrumPHP.
  
 
 ## Getting Started for trainers
@@ -30,17 +30,6 @@ Before your students can code, you have some work to do !
 **ville-language-sessionYYYYMM-type-project** as **bordeaux-php-202003-pjt3-servyy**
 5. Edit `.travis.yml` file to change default e-mails settings to get notification checking tasks end
 6. Remove the trainers instructions int this README file
-
-
-### Check on Travis
-
-1. Go on [https://travis-ci.com](https://travis-ci.com).
-2. Sign up if you don't have account,
-3. Look for your project in search bar on the left,
-4. As soon as your repository have a `.travis.yml` in root folder, Travis should detect it and run test.
-
-> You can watch this screenshot to see basic configuration : ![basic config](http://images.innoveduc.fr/symfony4/travis-config.png)
-
 
 
 ### Configure you repository - Settings options
@@ -71,11 +60,11 @@ Before your students can code, you have some work to do !
 
 ### Testing
 
-1. Run `./bin/phpcs` to launch PHP code sniffer
-2. Run `./bin/phpstan analyse src --level max` to launch PHPStan
-3. Run `./bin/phpmd src text phpmd.xml` to launch PHP Mess Detector
-3. Run `./bin/eslint assets/js` to launch ESLint JS linter
-3. Run `./bin/sass-lint -c sass-linter.yml` to launch Sass-lint SASS/CSS linter
+1. Run `.vendor/bin/phpcs` to launch PHP code sniffer
+2. Run `.vendor/bin/phpstan analyse src --level max` to launch PHPStan
+3. Run `.vendor/bin/phpmd src text phpmd.xml` to launch PHP Mess Detector
+3. Run `.vendor/bin/eslint assets/js` to launch ESLint JS linter
+3. Run `.vendor/bin/sass-lint -c sass-linter.yml` to launch Sass-lint SASS/CSS linter
 
 ### Windows Users
 

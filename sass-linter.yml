@@ -1,8 +1,7 @@
 files:
-  include: 'assets/**/*.s+(a|c)ss'
+  include: 'assets/styles/*.scss'
 options:
   formatter: stylish
-  merge-default-rules: false
 rules:
   indentation:
     - 2
