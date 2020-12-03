@@ -93,7 +93,6 @@ Caprover configuration files are :
 * [PHPMD](http://phpmd.org)
 * [ESLint](https://eslint.org/)
 * [Sass-Lint](https://github.com/sasstools/sass-lint)
-* [Travis CI](https://github.com/marketplace/travis-ci)
 
 ## Contributing
 
