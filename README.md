@@ -27,6 +27,9 @@ It's symfony website-skeleton project with some additional tools to validate cod
 3. Disallow merge available while one approbation is not submitted on PR.
 
 > You can watch this very tiny short video : (Loom : verrouillage branches GitHub)[https://www.loom.com/share/ad0c641d0b9447be9e40fa38a499953b]
+4. For deploying on caprover : add two repository secrets (settings -> secrets)
+    - CAPROVER_APP_NAME with the caprover app name as value
+    - CAPROVER_PASSWORD with the caprover password
 
 ## Getting Started for Students
 
@@ -90,7 +93,6 @@ Caprover configuration files are :
 * [PHPMD](http://phpmd.org)
 * [ESLint](https://eslint.org/)
 * [Sass-Lint](https://github.com/sasstools/sass-lint)
-* [Travis CI](https://github.com/marketplace/travis-ci)
 
 ## Contributing
 
