@@ -1,5 +1,12 @@
 grumphp:
     tasks:
+        shell:
+            scripts:
+               - ["-c", "./node_modules/.bin/sass-lint -c sass-linter.yml -v"]
+               - ["-c", "php app/console lint:twig templates"]
+        eslint:
+            bin: node_modules/.bin/eslint
+            config: .eslintrc.yml
         phpcs:
             standard: ~
         phpstan:
