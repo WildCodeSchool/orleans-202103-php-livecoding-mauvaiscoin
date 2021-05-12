@@ -1,4 +1,6 @@
 {
+    "name": "wildcodeschool/symfony-projet3-starter-kit",
+    "description": "",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "dev",
@@ -45,12 +47,15 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
+        "friendsoftwig/twigcs": ">=4",
         "phpmd/phpmd": "*",
         "phpro/grumphp": "*",
         "phpstan/phpdoc-parser": "*",
         "phpstan/phpstan": "*",
         "phpstan/phpstan-doctrine": "*",
         "phpstan/phpstan-symfony": "*",
+        "povils/phpmnd": "^2.4",
+        "sebastian/phpcpd": "^6.0",
         "squizlabs/php_codesniffer": "*",
         "symfony/browser-kit": "^5.2",
         "symfony/css-selector": "^5.2",
