@@ -40,7 +40,8 @@ jobs:
           ./vendor/bin/phpcs
           ./vendor/bin/phpstan analyse src --level max
           ./vendor/bin/phpmd src text phpmd.xml
-          ./node_modules/.bin/eslint assets/js
+          ./bin/console lint:twig templates
+          ./node_modules/.bin/eslint assets
           ./node_modules/.bin/sass-lint -c sass-linter.yml -v
 
       - name: phpunit
