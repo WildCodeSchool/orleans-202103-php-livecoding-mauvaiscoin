@@ -1,12 +1,14 @@
 @import 'variables.scss';
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Underdog&display=swap');
+@import 'navbar.scss';
 
 body {
     background-color: $light;
     color: $primary;
     font-family: $text-font;
     font-size: 16pt;
+    padding-top:60px;
 }
 
 h1, h2, h3 {
