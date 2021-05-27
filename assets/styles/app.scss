@@ -1,6 +1,15 @@
 @import 'variables.scss';
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Underdog&display=swap');
 
 body {
-    background-color: $wild-color;
-    color: $light;
+    background-color: $light;
+    color: $primary;
+    font-family: $text-font;
+    font-size: 16pt;
+}
+
+h1, h2, h3 {
+    font-family: $title-font;
+    color: $secondary;
 }
