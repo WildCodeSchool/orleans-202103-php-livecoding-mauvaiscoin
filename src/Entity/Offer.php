@@ -6,6 +6,7 @@ use App\Repository\OfferRepository;
 use DateTime;
 use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=OfferRepository::class)
@@ -21,6 +22,8 @@ class Offer
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(max=255)
      */
     private ?string $title;
 
@@ -36,6 +39,8 @@ class Offer
 
     /**
      * @ORM\Column(type="decimal", precision=9, scale=2)
+     * @Assert\NotBlank
+     * @Assert\Positive
      */
     private ?float $price;
 

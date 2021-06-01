@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	{{ encore_entry_link_tags('offer') }}
+{% endblock %}
+
+{% block title %}
+	{{ parent() }}
+	| Déposer une offre
+{% endblock %}
+
+{% block body %}
+	<main class="container-fluid">
+		<h1>Déposer une offre</h1>
+		<div class="container">
+			{{ form_start(form) }}
+
+			{{ form_row(form.title) }}
+			{{ form_row(form.price) }}
+
+			{{ form_row(form.description) }}
+
+			<button class="btn btn-success mt-5">Déposer mon offer</button>
+			{{ form_end(form) }}
+		</div>
+	</main>
+{% endblock %}
