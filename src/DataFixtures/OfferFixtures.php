@@ -4,9 +4,10 @@ namespace App\DataFixtures;
 
 use App\Entity\Offer;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
-class OfferFixtures extends Fixture
+class OfferFixtures extends Fixture implements DependentFixtureInterface
 {
     public const OFFERS = [
         [
@@ -38,9 +39,17 @@ class OfferFixtures extends Fixture
             $offer->setTitle($offerData['title']);
             $offer->setDescription($offerData['description']);
             $offer->setPrice($offerData['price']);
+            $offer->setCategory($this->getReference('category' . rand(0, count(CategoryFixtures::CATEGORIES) - 1)));
             $manager->persist($offer);
         }
 
         $manager->flush();
+    }
+
+    public function getDependencies()
+    {
+        return [
+            CategoryFixtures::class,
+        ];
     }
 }

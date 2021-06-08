@@ -44,6 +44,12 @@ class Offer
      */
     private ?float $price;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="offers")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private ?Category $category;
+
     public function __construct()
     {
         $this->setCreatedAt(new DateTime());
@@ -98,6 +104,18 @@ class Offer
     public function setPrice(float $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

@@ -21,6 +21,8 @@
 							<img src="https://loremflickr.com/320/240" class="card-img-top" alt="">
 							<div class="card-body">
 								<h2 class="card-title text-light">{{ offer.title }}</h2>
+								<p class="text-light">{{ offer.category.name }}</p>
+								<p class="text-light">{{ offer.createdAt|date('d/m/Y') }}</p>
 								<p class="card-text text-light">{{ offer.price }}€</p>
 							</div>
 						</div>

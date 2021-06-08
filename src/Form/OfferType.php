@@ -2,7 +2,9 @@
 
 namespace App\Form;
 
+use App\Entity\Category;
 use App\Entity\Offer;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
@@ -23,6 +25,10 @@ class OfferType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Clous rouillés',
                 ]
+            ])
+            ->add('category', EntityType::class, [
+                'class' => Category::class,
+                'choice_label' => 'name',
             ])
             ->add('description', TextareaType::class)
             ->add('price', MoneyType::class, [
