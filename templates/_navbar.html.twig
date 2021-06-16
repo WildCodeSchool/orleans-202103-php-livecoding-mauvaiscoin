@@ -13,6 +13,12 @@
         <a class="nav-link" href="#">Messages</a>
         <a class="nav-link" href="#">Favoris</a>
         <a class="nav-link" href="#">Mon profil</a>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        Bienvenue {{ app.user.firstname }} !
+        <a class="nav-link btn btn-secondary" href="{{ path('app_logout') }}">Deconnexion</a>
+        {% else %}
+        <a class="nav-link btn btn-secondary" href="{{ path('app_login') }}">Se connecter</a>
+        {% endif %}
       </div>
     </div>
   </div>
