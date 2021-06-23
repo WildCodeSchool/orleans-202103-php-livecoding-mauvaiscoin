@@ -42,6 +42,8 @@ class OfferController extends AbstractController
             // insertion en bdd
             $entityManager->persist($offer);
             $entityManager->flush();
+
+            $this->addFlash('success', 'L\'offre a bien été crée');
             // redirection
             return $this->redirectToRoute('home');
         }
