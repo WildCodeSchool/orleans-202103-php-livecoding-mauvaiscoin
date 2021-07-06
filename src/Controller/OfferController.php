@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Offer;
+use App\Entity\SearchOffer;
 use App\Form\OfferType;
+use App\Form\SearchOfferType;
 use App\Repository\OfferRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -20,10 +22,19 @@ class OfferController extends AbstractController
     /**
      * @Route("/", name="list")
      */
-    public function index(OfferRepository $offerRepository): Response
+    public function index(OfferRepository $offerRepository, Request $request): Response
     {
+        $searchOffer = new SearchOffer();
+        $form = $this->createForm(SearchOfferType::class, $searchOffer);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $offers = $offerRepository->findBySearch($searchOffer);
+        }
+
         return $this->render('offer/index.html.twig', [
-            'offers' => $offerRepository->findAll(),
+            'offers' => $offers ?? $offerRepository->findAll(),
+            'form' => $form->createView(),
         ]);
     }
 
